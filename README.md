@@ -16,6 +16,42 @@ GitLaunch AI analyzes your codebase (README, file structure, and metadata) to un
 - ⚡ **Instant Preview**: Live rendering of the generated site.
 - 📥 **Export Ready**: Download the full HTML/Tailwind code in one click.
 
+- ## 🎬 Demo & Screenshots
+
+GitLaunch AI transforms GitHub repositories into stunning marketing landing pages. Here's what the generated pages look like:
+
+### Hero Section
+The app creates a compelling hero section with:
+- Repository information and star count
+- Engaging headline and description
+- Code snippet display
+- Live preview toggle
+
+### Full Page Features
+- **Problem/Challenge Section**: Visual storytelling about the project's value
+- **Feature Showcase**: Key features with icons and descriptions
+- **Social Proof**: Testimonials and usage statistics  
+- **Pricing/Value Props**: Feature checklist and CTAs
+- **Footer**: Complete navigation and links
+
+### Example Output
+When analyzing the React repository, GitLaunch AI generated:
+- Header with navigation (Solutions, Product, Pricing, Resources)
+- Hero: "Build user interface effortlessly" with 241K+ stars displayed
+- Problem visualization with challenge/solution narrative
+- Feature cards highlighting Virtual DOM, community support, extensibility
+- Testimonials from community leaders
+- Strong CTAs: "Start building with React today"
+- Professional footer with product, company, and legal links
+
+### Design Customization
+The generated pages include:
+✨ Dark theme with modern design patterns  
+🎨 Customizable colors and fonts via Design Studio  
+📱 Responsive layouts for desktop and mobile  
+⚡ Fast-loading with optimized assets
+
+
 ## 📚 Documentation
 
 We maintain enterprise-grade documentation for architecture, product, and engineering standards.
