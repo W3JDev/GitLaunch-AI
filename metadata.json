@@ -1,0 +1,5 @@
+{
+  "name": "GitLaunch AI",
+  "description": "An AI-powered landing page builder that analyzes GitHub repositories to generate high-converting, developer-centric web pages automatically.",
+  "requestFramePermissions": []
+}
