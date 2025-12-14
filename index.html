@@ -2,9 +2,19 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="author" content="w3jdev" />
+    <meta name="theme-color" content="#0f172a" />
     <meta property="og:site_name" content="GitLaunch AI by w3jdev" />
+    <meta name="description" content="Turn GitHub Repos into High-Converting Landing Pages Instantly with AI." />
+    
+    <!-- iOS PWA capability -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="GitLaunch" />
+    <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/google-gemini.png" />
+
+    <link rel="manifest" href="/manifest.json" />
     <title>GitLaunch AI - GitHub to Landing Page</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -13,6 +23,7 @@
         font-family: 'Inter', sans-serif;
         background-color: #0f172a; /* Slate 900 */
         color: #f8fafc;
+        overscroll-behavior-y: none; /* Prevent pull-to-refresh on mobile */
       }
       /* Custom Scrollbar */
       ::-webkit-scrollbar {
@@ -45,5 +56,29 @@
 </head>
   <body>
     <div id="root"></div>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/service-worker.js')
+            .then(reg => {
+                console.log('SW registered');
+                // Check for updates
+                reg.onupdatefound = () => {
+                    const installingWorker = reg.installing;
+                    installingWorker.onstatechange = () => {
+                        if (installingWorker.state === 'installed') {
+                            if (navigator.serviceWorker.controller) {
+                                console.log('New content available; please refresh.');
+                            } else {
+                                console.log('Content is cached for offline use.');
+                            }
+                        }
+                    };
+                };
+            })
+            .catch(err => console.log('SW failed', err));
+        });
+      }
+    </script>
   </body>
 </html>
