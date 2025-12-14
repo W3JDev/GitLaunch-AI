@@ -1,5 +1,7 @@
 # GitLaunch AI - Agents & Contributors Guide
 
+> **Primary maintainer**: w3jdev (w3jdev.com)
+
 ## 1. Project Overview
 **GitLaunch AI** is a React-based application that leverages the Google Gemini API to analyze GitHub repositories and automatically generate high-converting, developer-centric landing pages.
 

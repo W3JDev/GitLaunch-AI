@@ -60,3 +60,12 @@ AGENTS.md       # AI Coding Guidelines
 ## 🤝 Contributing
 
 Please read `AGENTS.md` before submitting PRs to understand our coding standards and architectural boundaries.
+
+---
+
+## ✍️ Author
+
+**w3jdev**
+- 🌐 [w3jdev.com](https://w3jdev.com)
+- 🐙 [github.com/w3jdev](https://github.com/w3jdev)
+- 💼 [linkedin.com/in/w3jdev](https://linkedin.com/in/w3jdev)

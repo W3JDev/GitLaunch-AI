@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useRef } from 'react';
 import { Github, Wand2, Layout, Smartphone, Monitor, Download, BarChart2, Loader2, Play, Send, MessageSquare } from 'lucide-react';
 import { AppState, GeneratedPage, AnalysisResult, ChatMessage } from './types';
@@ -104,11 +105,21 @@ const App: React.FC = () => {
     <div className="flex flex-col h-screen bg-slate-900 text-slate-100 overflow-hidden">
       {/* Header */}
       <header className="flex items-center justify-between px-6 py-4 bg-slate-950 border-b border-slate-800 shrink-0">
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-3">
           <div className="bg-blue-600 p-2 rounded-lg">
             <Wand2 className="w-5 h-5 text-white" />
           </div>
-          <span className="font-bold text-xl tracking-tight">GitLaunch AI</span>
+          <div className="flex flex-col">
+            <span className="font-bold text-xl tracking-tight leading-none text-slate-100">GitLaunch AI</span>
+            <a 
+              href="https://w3jdev.com" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-[10px] text-slate-500 hover:text-blue-400 font-medium tracking-wide transition-colors"
+            >
+                by w3jdev
+            </a>
+          </div>
         </div>
         
         {generatedPage && (
@@ -277,6 +288,13 @@ const App: React.FC = () => {
                     </button>
                 </div>
            )}
+
+           {/* App Footer / Branding */}
+           <div className="p-3 bg-slate-950 border-t border-slate-800 text-center">
+               <p className="text-[10px] text-slate-600">
+                  &copy; {new Date().getFullYear()} <a href="https://w3jdev.com" target="_blank" rel="noopener noreferrer" className="hover:text-slate-400 underline decoration-dotted transition-colors">w3jdev</a> · <a href="https://github.com/w3jdev" target="_blank" rel="noopener noreferrer" className="hover:text-slate-400 transition-colors">GitHub</a> · <a href="https://linkedin.com/in/w3jdev" target="_blank" rel="noopener noreferrer" className="hover:text-slate-400 transition-colors">LinkedIn</a>
+               </p>
+           </div>
         </aside>
 
         {/* Viewport Area */}

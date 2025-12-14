@@ -12,6 +12,8 @@ export const generateStaticHTML = (data: GeneratedPage): string => {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="w3jdev">
+    <meta property="og:site_name" content="GitLaunch AI by w3jdev">
     <title>${data.meta?.title || 'Landing Page'}</title>
     <meta name="description" content="${data.meta?.description || ''}">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -309,6 +311,7 @@ export const generateStaticHTML = (data: GeneratedPage): string => {
     <footer class="py-20 px-6 border-t ${isDark ? 'bg-[#0B0F19] border-slate-800 text-slate-500' : 'bg-white border-gray-100 text-slate-500'}">
         <div class="max-w-7xl mx-auto text-center">
             <p>&copy; 2024 ${brandName}. All rights reserved.</p>
+            <p class="text-xs mt-4 opacity-50">Generated with <a href="#" class="hover:underline hover:text-primary">GitLaunch AI</a> by <a href="https://w3jdev.com" target="_blank" class="hover:underline hover:text-primary font-medium">w3jdev</a></p>
         </div>
     </footer>
 
